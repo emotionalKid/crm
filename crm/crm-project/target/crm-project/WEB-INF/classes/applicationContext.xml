@@ -19,7 +19,8 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
     <context:property-placeholder location="classpath:*.properties" />-->
     <!-- 扫描注解 -->
     <context:component-scan base-package="com.zhh.crm.settings.service" />
-    <context:component-scan base-package="com.zhh.crm.workbench.service" />
+    <context:component-scan base-package="com.zhh.crm.workbench.activity.service" />
+    <context:component-scan base-package="com.zhh.crm.workbench.clue.service" />
 <!--    <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
 <!--        <property name="basePackage" value="com.zhh.crm.settings.mapper,com.zhh.crm.workbench.mapper"></property>-->
 <!--        &lt;!&ndash;    <property name="basePackage" value="com.zhh.crm.workbench.mapper"></property>&ndash;&gt;-->
