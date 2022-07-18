@@ -104,4 +104,15 @@ public class ClueController {
         }
         return retMap;
     }
+    @RequestMapping("/workbench/clue/selectDetailPageData.do")
+    public String selectDetailPageData(String id,HttpServletRequest request){
+        //获取数据
+        Clue clue = clueService.selectClueById(id);
+        List<ClueRemark> clueRemarks = clueRemarkService.selectClueRemarkById(id);
+        List<Activity> activities = activityService.selectActivityContactClueID(id);
+        request.setAttribute("clue",clue);
+        request.setAttribute("clueRemarks",clueRemarks);
+        request.setAttribute("activities",activities);
+        return "/workbench/clue/detail";
+    }
 }
